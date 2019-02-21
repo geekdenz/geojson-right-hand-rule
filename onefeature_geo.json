@@ -1,0 +1,216 @@
+{
+    "id": "914d3498-fd11-4460-8e20-5c6ffdda3912",
+    "title": "Test One Feature",
+    "purpose": null,
+    "startYear": 2019,
+    "totalYears": 5,
+    "planBoundaryText": "{\"type\":\"FeatureCollection\",\"features\":[{\"type\":\"Feature\",\"id\":\"layer-1571.3866066\",\"geometry\":{\"type\":\"MultiPolygon\",\"coordinates\":[[[[1821503.9197063716,5527654.450056185],[1821533.3293374614,5527659.2949822545],[1821585.7844346566,5527672.037274372],[1821625.3893432848,5527673.908525868],[1821638.4512526114,5527703.882531776],[1821639.8765378965,5527712.720206226],[1821643.4385598707,5527719.763277948],[1821641.0519406134,5527728.059823386],[1821649.8240501515,5527730.374861808],[1821659.4206714935,5527744.108316689],[1821662.0889968802,5527758.872339506],[1821652.7660373817,5527778.814694912],[1821649.773152757,5527794.016305644],[1821655.3814921489,5527832.792038136],[1821633.9010802181,5527872.343730747],[1821631.5090606401,5527873.553278428],[1821598.423236846,5527869.007970567],[1821594.1265187191,5527873.157125033],[1821588.2981801787,5527867.216161662],[1821585.662103519,5527869.61069667],[1821578.2306080807,5527862.429995369],[1821576.089290985,5527864.263610836],[1821568.5452254056,5527856.867698839],[1821566.3980345067,5527858.694084813],[1821558.2333200823,5527850.760922725],[1821556.0265071061,5527852.966849493],[1821549.1869499572,5527845.972350513],[1821547.0259147394,5527848.097288618],[1821538.912208584,5527839.971865604],[1821536.6552099322,5527842.157045454],[1821529.8621777524,5527835.298192772],[1821523.3878506315,5527841.539393439],[1821520.965492826,5527839.370127483],[1821514.4702127231,5527845.717495288],[1821508.3121102687,5527839.302857252],[1821477.3152098102,5527833.106464284],[1821509.9349271166,5527773.450262712],[1821491.9779552624,5527760.161534108],[1821500.435059925,5527744.702440264],[1821465.8154628568,5527724.109024197],[1821469.2369009047,5527717.850561962],[1821480.5681613204,5527697.1232453855],[1821503.9197063716,5527654.450056185]]]]},\"properties\":{\"id\":3866066,\"appellation\":\"Lot 1 DP 77988\",\"affected_surveys\":\"DP 77988\",\"parcel_intent\":\"DCDB\",\"topology_type\":\"Primary\",\"status\":\"Current\",\"statutory_actions\":null,\"land_district\":\"Wellington\",\"titles\":\"221379, WN44B/786\",\"survey_area\":30064,\"calc_area\":30065}}]}",
+    "supplyNumber": "",
+    "supplyCompany": {
+        "id": 1,
+        "name": "(No Supply Company)"
+    },
+    "latitude": -40.373101,
+    "longitude": 175.602665,
+    "users": [{
+        "userId": "75c6ed21-b98b-4658-9cfa-9d46fc9be5d6",
+        "userDisplayName": "Tim Heuer",
+        "roleId": "bf16d125-4b2f-4331-a7aa-5a8aeade8899",
+        "roleTitle": "Editor"
+    }],
+    "planDataConsumers": [],
+    "notes": null,
+    "features": [],
+    "perPlantCosts": [{
+        "id": "886098b7-a1d0-4b60-98eb-a66e6ab12275",
+        "title": "Price per plant",
+        "note": "Enter the average per plant costs from your supplier or nursery. If you don't know, use the default provided.",
+        "cost": 3.5
+    }, {
+        "id": "443ff485-75ef-4022-aea3-dff595aaf834",
+        "title": "Labour cost per plant",
+        "note": "The average cost of labour required to get a plant in the ground. Use this to budget in time taken to plant each plant. Ask for a per-plant rate if using a contractor and enter it here. The default is an average estimated cost to use if you are carrying out the planting yourself.",
+        "cost": 2.0
+    }, {
+        "id": "ba265832-65f8-4f5a-b41a-844f01e47004",
+        "title": "Other costs per plant",
+        "note": "This value includes the costs involved in any other per plant item or requirement e.g. stakes, plant protectors. Note that maintenance costs are covered separately on a per feature basis in the planning section.",
+        "cost": 0.0
+    }],
+    "fencingOptions": [{
+        "id": "eb39a245-7d0e-4461-bfee-1eed40d57a59",
+        "title": "1 wire",
+        "note": "the average cost per linear metre to install a 1 wire fence",
+        "cost": 3.0
+    }, {
+        "id": "d1f2828f-c18e-406f-92b7-dc008bb5b087",
+        "title": "2 wire",
+        "note": "the average cost per linear metre to install a 2 wire fence",
+        "cost": 4.0
+    }, {
+        "id": "d4f07fa8-dc3f-4009-96f5-25f67791d34b",
+        "title": "3 wire",
+        "note": "the average cost per linear metre to install a 3 wire fence",
+        "cost": 5.5
+    }, {
+        "id": "86c82577-99c6-42dd-bf9b-82b3e15eb668",
+        "title": "4 wire",
+        "note": "the average cost per linear metre to install a 4 wire fence",
+        "cost": 6.5
+    }, {
+        "id": "adf61f49-bbb0-4558-a97f-1ae0c7ba5f61",
+        "title": "5 wire",
+        "note": "the average cost per linear metre to install a 5 wire fence",
+        "cost": 8.0
+    }, {
+        "id": "f9a00699-c774-4d2e-af0a-fe42ca42a882",
+        "title": "6 wire",
+        "note": "the average cost per linear metre to install a 6 wire fence",
+        "cost": 9.0
+    }, {
+        "id": "10482aff-20c3-4e78-b421-2a136b1688ac",
+        "title": "7 to 8 wire, post and batten",
+        "note": "the average cost per linear metre to install a 7 to 8 wire post and batten fence",
+        "cost": 17.0
+    }, {
+        "id": "ddb5eaf7-356d-4250-8b3e-7967077000b7",
+        "title": "7 to 8 wire, no battens",
+        "note": "the average cost per linear metre to install a 7 to 8 wire fence with no battens",
+        "cost": 12.0
+    }, {
+        "id": "d26c8a46-70f5-437b-904e-43aed8cc9766",
+        "title": "Deer fence",
+        "note": "the average cost per linear metre to install a deer fence",
+        "cost": 25.0
+    }],
+    "vegetationTypes": [{
+        "id": 1,
+        "title": "Exotic trees"
+    }, {
+        "id": 2,
+        "title": "Grass"
+    }, {
+        "id": 3,
+        "title": "Native dominated"
+    }, {
+        "id": 4,
+        "title": "Weeds"
+    }],
+    "invasiveWeeds": [{
+        "id": 1,
+        "title": "Alligator weed"
+    }, {
+        "id": 2,
+        "title": "Barberry"
+    }, {
+        "id": 3,
+        "title": "Blackberry"
+    }, {
+        "id": 4,
+        "title": "Broom"
+    }, {
+        "id": 5,
+        "title": "Convolvulus (bindweed)"
+    }, {
+        "id": 7,
+        "title": "Gorse"
+    }, {
+        "id": 8,
+        "title": "Japanese honeysuckle"
+    }, {
+        "id": 9,
+        "title": "Old man's beard"
+    }, {
+        "id": 10,
+        "title": "Privet (Chinese and tree)"
+    }, {
+        "id": 11,
+        "title": "Reed sweet grass"
+    }, {
+        "id": 12,
+        "title": "Wandering Willie"
+    }, {
+        "id": 6,
+        "title": "Crack or grey willow"
+    }],
+    "featureTypes": [{
+        "id": 1,
+        "title": "Wetland",
+        "displayText": "wetland or critical source area",
+        "wetlandPlantingZone": {
+            "id": 3,
+            "title": "Wetland",
+            "plantingDensity": 0.64,
+            "defaultWidth": 1
+        }
+    }, {
+        "id": 2,
+        "title": "Waterway",
+        "displayText": "river or stream",
+        "upperBankPlantingZone": {
+            "id": 1,
+            "title": "Upper bank",
+            "plantingDensity": 0.45,
+            "defaultWidth": 1
+        },
+        "lowerBankPlantingZone": {
+            "id": 2,
+            "title": "Lower bank",
+            "plantingDensity": 1.0,
+            "defaultWidth": 1
+        },
+        "grassBufferPlantingZone": {
+            "id": 4,
+            "title": "Grass buffer",
+            "plantingDensity": 0.0,
+            "defaultWidth": 1
+        }
+    }, {
+        "id": 3,
+        "title": "Waterbody",
+        "displayText": "lake or pond",
+        "upperBankPlantingZone": {
+            "id": 1,
+            "title": "Upper bank",
+            "plantingDensity": 0.45,
+            "defaultWidth": 1
+        },
+        "lowerBankPlantingZone": {
+            "id": 2,
+            "title": "Lower bank",
+            "plantingDensity": 1.0,
+            "defaultWidth": 1
+        },
+        "grassBufferPlantingZone": {
+            "id": 4,
+            "title": "Grass buffer",
+            "plantingDensity": 0.0,
+            "defaultWidth": 1
+        }
+    }],
+    "propertyTypes": [{
+        "propertyTypeId": "a90dcd20-416a-4187-ab07-24fa2ac4923c",
+        "displayTitle": "Dairy",
+        "isApplied": false
+    }, {
+        "propertyTypeId": "6945db84-f662-4d3b-8bee-fcb96c135d26",
+        "displayTitle": "Deer",
+        "isApplied": false
+    }, {
+        "propertyTypeId": "7c730e4b-eb10-4420-9a82-4d78e19cfe94",
+        "displayTitle": "Forestry",
+        "isApplied": false
+    }, {
+        "propertyTypeId": "b1c9d040-1fe4-4585-8550-7c53eee3bfcc",
+        "displayTitle": "Horticulture or cropping",
+        "isApplied": false
+    }, {
+        "propertyTypeId": "20386404-81b2-4759-80b0-3d590311b1f0",
+        "displayTitle": "Sheep or beef",
+        "isApplied": false
+    }, {
+        "propertyTypeId": "6fe5f6bd-218f-4730-ac03-5e3fc7b2ad2c",
+        "displayTitle": "Other",
+        "isApplied": true
+    }]
+}
