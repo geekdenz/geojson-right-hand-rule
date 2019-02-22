@@ -20,5 +20,5 @@ const rhrGeoJson = olGeoJson.writeFeaturesObject(parsed, {
 // rhrGeoJson.features //?
 // rhrGeoJson.features.length //?
 // console.log(JSON.stringify(rhrGeoJson, undefined, 2))
-writeFileSync('testMe.json', JSON.stringify(rhrGeoJson, undefined, 2), 'utf8')
+writeFileSync('rp/valid.json', JSON.stringify(rhrGeoJson, undefined, 2), 'utf8')
 // console.log(JSON.stringify(rhrGeoJson, undefined, 2))

@@ -1,6 +1,8 @@
-import { readFileSync } from 'fs';
-const json = JSON.parse(readFileSync('geo.json', 'utf8'));
-const geojsonString = json.planBoundaryText;
-const geojson = JSON.parse(geojsonString);
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var fs_1 = require("fs");
+var json = JSON.parse(fs_1.readFileSync('geo.json', 'utf8'));
+var geojsonString = json.planBoundaryText;
+var geojson = JSON.parse(geojsonString);
 // geojson
 console.log(JSON.stringify(geojson, undefined, 2));
