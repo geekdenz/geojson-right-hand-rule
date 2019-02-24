@@ -1,13 +1,10 @@
-import {readFileSync} from 'fs'
-import {writeFileSync} from 'fs'
-// const {readFileSync, writeFileSync} = require('fs')
-// const rhr = require('./rhr.mjs')
-import {ensure} from './rhr'
-// const {ensure} = require('./')
-// const ensure = rhr.ensure
-const geoJsonSourceFileName = process.env['SOURCE'] || 'complicated_geo.json'
-const targetFileName = process.env['TARGET'] || 'complicated_rhr_geo.json'
+import unkinkPolygon from '@turf/unkink-polygon'
+import {rightHandRule} from './lib/validate'
+import rewind from '@turf/rewind'
 
-const geoJson = JSON.parse(readFileSync(geoJsonSourceFileName, 'utf8'))
-const rhrEnsured = ensure(geoJson)
-writeFileSync(targetFileName, JSON.stringify(rhrEnsured, undefined, 2), 'utf8')
+
+export function makeValid(geojson: any): any {
+    const result = unkinkPolygon(geojson)
+    result.features = result.features.map(f => rightHandRule(f) ? f : rewind(f))
+    return result
+}
