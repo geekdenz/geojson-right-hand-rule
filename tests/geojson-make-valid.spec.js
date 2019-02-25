@@ -5,6 +5,7 @@ var chai_1 = require("chai");
 var helpers_1 = require("@turf/helpers");
 var __1 = require("..");
 var geojsonhint_1 = require("@mapbox/geojsonhint");
+var fs_1 = require("fs");
 mocha_1.describe('Basic polygon gets corrected', function () {
     mocha_1.it('makes a join symbol (⨝) into valid features', function () {
         var poly = helpers_1.polygon([[[0, 0], [2, 0], [0, 2], [2, 2], [0, 0]]]);
@@ -39,6 +40,12 @@ mocha_1.describe('Basic polygon gets corrected', function () {
             [[2, 2], [2, -2], [-2, -2], [-2, 2], [2, 2]]
         ]);
         var result = __1.makeValid(__1.makeValid(poly));
+        var hints = geojsonhint_1.hint(result);
+        chai_1.expect(hints.length).eq(0);
+    });
+    mocha_1.it('handles a scenario from the Riparian Planner', function () {
+        var json = JSON.parse(fs_1.readFileSync('rp/invalid.json', 'utf8'));
+        var result = __1.makeValid(json);
         var hints = geojsonhint_1.hint(result);
         chai_1.expect(hints.length).eq(0);
     });

@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@mapbox/geojsonhint": "^2.1.0",
+    "@turf/clean-coords": "^6.0.1",
     "@turf/helpers": "^6.1.4",
     "@turf/kinks": "^6.0.0",
     "@turf/polygonize": "^5.1.5",

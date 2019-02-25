@@ -1,10 +1,6 @@
-import unkinkPolygon from '@turf/unkink-polygon'
-import {rightHandRule} from './lib/validate'
-import rewind from '@turf/rewind'
-
+import unkink from '@turf/unkink-polygon'
+import { rewind } from './lib/rewinder';
 
 export function makeValid(geojson: any): any {
-    const result = unkinkPolygon(geojson)
-    result.features = result.features.map(f => rightHandRule(f) ? f : rewind(f))
-    return result
+    return rewind(unkink(geojson), true)
 }

@@ -3,6 +3,7 @@ import {expect} from 'chai'
 import {polygon} from '@turf/helpers'
 import {makeValid} from '..'
 import {hint} from '@mapbox/geojsonhint'
+import { readFileSync } from 'fs';
 
 describe('Basic polygon gets corrected', () => {
     it('makes a join symbol (⨝) into valid features', () => {
@@ -38,6 +39,12 @@ describe('Basic polygon gets corrected', () => {
             [[2, 2], [2, -2], [-2, -2], [-2, 2], [2, 2]]
         ])
         const result = makeValid(makeValid(poly))
+        const hints = hint(result)
+        expect(hints.length).eq(0)
+    })
+    it('handles a scenario from the Riparian Planner', () => {
+        const json = JSON.parse(readFileSync('rp/invalid.json', 'utf8'))
+        const result = makeValid(json)
         const hints = hint(result)
         expect(hints.length).eq(0)
     })

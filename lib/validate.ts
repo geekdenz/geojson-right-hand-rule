@@ -16,13 +16,15 @@ function isRingClockwise (coords) {
     return area >= 0;
 }
 
-function isPolyRHR (coords) {
+export function isPolyRHR (coords) {
     if (coords && coords.length > 0) {
-        if (isRingClockwise(coords[0]))
+        if (isRingClockwise(coords[0])) {
             return false;
+        }
         var interiorCoords = coords.slice(1, coords.length);
-        if (!interiorCoords.every(isRingClockwise))
+        if (!interiorCoords.every(isRingClockwise)) {
             return false;
+        }
     }
     return true;
 }
