@@ -4,12 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ts-mocha **/*.spec.ts",
+    "test:watch": "ts-mocha --watch **/*.spec.ts"
   },
-  "author": "",
+  "author": "Tim-Hinnerk Heuer",
   "license": "ISC",
   "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/expect": "^1.20.4",
+    "@types/mocha": "^5.2.6",
     "@types/node": "^11.9.4",
+    "chai": "^4.2.0",
+    "mocha": "^6.0.1",
+    "ts-mocha": "^6.0.0",
+    "ts-node": "^8.0.2",
     "typescript": "^3.3.3"
   },
   "dependencies": {
