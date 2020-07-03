@@ -49,4 +49,35 @@ mocha_1.describe('Basic polygon gets corrected', function () {
         var hints = geojsonhint_1.hint(result);
         chai_1.expect(hints.length).eq(0);
     });
+    mocha_1.it('handles non-polygons and does not do anything to them', function () {
+        var line = helpers_1.lineString([[0, 0], [5, 5]]);
+        var result = __1.makeValid(line);
+        result.features.forEach(function (feature) { return chai_1.expect(feature.geometry.coordinates.length).to.not.equal(0); });
+        var hints = geojsonhint_1.hint(result);
+        chai_1.expect(hints.length).eq(0);
+    });
+    mocha_1.it('handles valid 2193 line string', function () {
+        var json = { "type": "Feature", "id": "d3e2ed45-5373-4f80-8dd6-5f889be444c6", "geometry": { "type": "LineString", "coordinates": [[1693577.0177813934, 6001360.516283825], [1705501.1941938647, 6000876.414327129]] }, "properties": { "featureType": "Waterway" } };
+        var result = __1.makeValid(json);
+        result.features.forEach(function (feature) { return chai_1.expect(feature.geometry.coordinates.length).to.not.equal(0); });
+        var hints = geojsonhint_1.hint(result);
+        chai_1.expect(hints.length).eq(0);
+    });
+    mocha_1.it('handles valid geometries', function () {
+        var coords = [[0, 0], [1, 0], [1, -1], [0, -1], [0, 0]];
+        var json = {
+            'type': 'FeatureCollection',
+            features: [
+                helpers_1.polygon([coords])
+            ],
+        };
+        var result = __1.makeValid(json);
+        result.features.forEach(function (feature) { return chai_1.expect(feature.geometry.coordinates.length).to.not.equal(0); });
+        var hints = geojsonhint_1.hint(result);
+        chai_1.expect(hints.length).eq(0);
+        var result2 = __1.makeValid(result);
+        result2.features.forEach(function (feature) { return chai_1.expect(feature.geometry.coordinates.length).to.not.equal(0); });
+        var hints2 = geojsonhint_1.hint(result2);
+        chai_1.expect(hints2.length).eq(0);
+    });
 });
