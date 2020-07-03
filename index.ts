@@ -2,10 +2,8 @@ import unkink from '@turf/unkink-polygon'
 import { rewind } from './lib/rewinder';
 
 export function makeValid(geojson: any): any {
-    // console.log('qwe', geojson.geometry)
     if (geojson.type === 'Feature') {
         if (geojson.geometry.type === 'LineString') {
-            // return geojson;
             return {
                 type: 'FeatureCollection',
                 features: [
@@ -13,9 +11,7 @@ export function makeValid(geojson: any): any {
                 ]
             }
         }
-    } else {
-        // FeatureCollection
-
     }
+    // else FeatureCollection
     return rewind(unkink(geojson), true)
 }
