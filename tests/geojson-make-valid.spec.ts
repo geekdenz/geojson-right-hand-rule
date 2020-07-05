@@ -79,4 +79,18 @@ describe('Basic polygon gets corrected', () => {
         const hints2 = hint(result2)
         expect(hints2.length).eq(0)
     })
+    it('handles some maybe invalid geojson', () => {
+        const json = {"type":"FeatureCollection","features":[{"type":"Feature","id":"061e8586-4ef7-4568-88ca-0761d4d8f86f","geometry":{"type":"LineString","coordinates":[[1820783.7584029196,5527758.168991481],[1821007.4959301453,5527764.538792435]]},"properties":{"featureType":"Waterway"}}]}
+        const result = makeValid(json)
+        console.log('result', result)
+        result.features.forEach(feature => expect(feature.geometry.coordinates.length).to.not.equal(0));
+        const hints = hint(result)
+        expect(hints.length).eq(0)
+        const result2 = makeValid(result)
+        result2.features.forEach(feature => expect(feature.geometry.coordinates.length).to.not.equal(0));
+        const hints2 = hint(result2)
+        expect(hints2.length).eq(0)
+        console.log('res', result)
+        expect(result.features.length).to.not.equal(0)
+    })
 })

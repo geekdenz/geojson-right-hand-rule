@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "ts-mocha **/*.spec.ts",
-    "test:watch": "ts-mocha --watch **/*.spec.ts index.ts"
+    "test:watch": "nodemon -e ts -x 'tsc && npm test'"
   },
   "author": "Tim-Hinnerk Heuer",
   "license": "ISC",
   "devDependencies": {
     "@types/chai": "^4.1.7",
     "@types/expect": "^1.20.4",
+    "@types/geojson": "^7946.0.7",
     "@types/mocha": "^5.2.6",
     "@types/node": "^11.9.4",
     "chai": "^4.2.0",

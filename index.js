@@ -1,23 +1,40 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var unkink_polygon_1 = require("@turf/unkink-polygon");
-var rewinder_1 = require("./lib/rewinder");
 function makeValid(geojson) {
-    // console.log('qwe', geojson.geometry)
     if (geojson.type === 'Feature') {
         if (geojson.geometry.type === 'LineString') {
-            // return geojson;
-            return {
-                type: 'FeatureCollection',
-                features: [
-                    geojson,
-                ]
-            };
+            return geojson;
         }
     }
     else {
         // FeatureCollection
+        geojson.features.map(makeValid);
     }
-    return rewinder_1.rewind(unkink_polygon_1.default(geojson), true);
 }
 exports.makeValid = makeValid;
+// if (geojson.type === 'Feature') {
+//     if (geojson.geometry.type === 'LineString') {
+//         return {
+//             type: 'FeatureCollection',
+//             features: [
+//                 geojson,
+//             ]
+//         }
+//     }
+// } else {
+//     // FeatureCollection
+//     geojson.features.forEach(feature => {
+//     })
+// }
+// const unkinked = unkink(geojson)
+// let unkinked;
+// const kinksObj = kinks(geojson)
+// console.log('kinksObj', kinksObj)
+// if (kinksObj.features.length) {
+//     unkinked = unkink(geojson)
+// } else {
+//     unkinked = geojson;
+// }
+// console.log('unkinked', unkinked)
+// return rewind(geojson, true)
+// return unkink(rewind(geojson, true))

@@ -1,15 +1,30 @@
+import kinks from "@turf/kinks";
+import unkinkPolygon from "@turf/unkink-polygon";
+
 export function rewind(gj, outer) {
           switch ((gj && gj.type) || null) {
               case 'FeatureCollection':
+                  console.log('A', gj)
+                //   gj.features = gj.features.map(curryOuter(rewind, outer));
                   gj.features = gj.features.map(curryOuter(rewind, outer));
                   return gj;
               case 'Feature':
+                //   if (gj.geometry.type === 'LineString') {
+                //       return gj;
+                //   }
+                  console.log('B0', gj)
                   gj.geometry = rewind(gj.geometry, outer);
+                  console.log('B1', gj)
                   return gj;
               case 'Polygon':
               case 'MultiPolygon':
+                  console.log('C')
+                //   if (kinks(gj).features.length) {
+                //       gj = unkinkPolygon(gj);
+                //   }
                   return correct(gj, outer);
               default:
+                  console.log('D')
                   return gj;
           }
       }
